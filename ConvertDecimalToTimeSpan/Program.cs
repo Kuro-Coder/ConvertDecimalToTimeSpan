@@ -4,17 +4,19 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 Console.WriteLine("Hello, World!. I'm KuroCoder.");
 
-var workTime = TimeSpan.Parse("00:20:00");
-Console.WriteLine($"WorkTime is: {workTime}"); // 00:20:00
+//===========================================================
 
-decimal repetitions = 220;
-Console.WriteLine($"Repetitions Work is: {repetitions}"); // 220
+//var workTime = TimeSpan.Parse("00:20:00");
+//Console.WriteLine($"WorkTime is: {workTime}"); // 00:20:00
 
-var totalWorkTime = workTime.Minutes * repetitions;
-Console.WriteLine($"Total Work Time is: {totalWorkTime}"); // 4400
+//decimal repetitions = 220;
+//Console.WriteLine($"Repetitions Work is: {repetitions}"); // 220
 
-var totalWorkHours = System.String.Format("{0:0.00}", (totalWorkTime / 60));
-Console.WriteLine($"Total Work Hours is: {totalWorkHours}"); // 73/33
+//var totalWorkTime = workTime.Minutes * repetitions;
+//Console.WriteLine($"Total Work Time is: {totalWorkTime}"); // 4400
+
+//var totalWorkHours = System.String.Format("{0:0.00}", (totalWorkTime / 60));
+//Console.WriteLine($"Total Work Hours is: {totalWorkHours}"); // 73/33
 
 //===========================================================
 
@@ -29,15 +31,25 @@ Console.WriteLine($"Total Work Hours is: {totalWorkHours}"); // 73/33
 
 //=========================================================== 
 
-//var time = "73:54";
-//var date = new TimeSpan(int.Parse(time.Split(':')[0]),    // hours
-//                           int.Parse(time.Split(':')[1]),    // minutes
-//                           0);
-//Console.WriteLine($"timespan is: {date}"); // 73:54 => 3.01:54:00
+var time = "73:54";
+var date = new TimeSpan(int.Parse(time.Split(':')[0]),    // hours
+                           int.Parse(time.Split(':')[1]),    // minutes
+                           0);
+Console.WriteLine($"timespan is: {date}"); // 73:54 => 3.01:54:00
 
 //=========================================================== 
 
-Console.WriteLine($"timespan is: {TimeSpan.Zero}"); // 00:00:00
+//Console.WriteLine($"timespan is: {TimeSpan.Zero}"); // 00:00:00
+
+//===========================================================
+
+//var workTime = TimeSpan.Parse("73:20:00");
+//Console.WriteLine($"WorkTime is: {workTime}");
+
+//===========================================================
+//TimeSpan ts = TimeSpan.FromTicks(128000000000);
+//double minutes = ts.TotalHours;
+//Console.WriteLine($"WorkTime is: {minutes}");
 
 
 Console.ReadKey();
